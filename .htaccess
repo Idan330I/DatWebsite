@@ -1,0 +1,9 @@
+# Il mod_rewrite inzia qui
+
+RewriteEngine on
+
+RewriteCond %{REQUESTED_FILENAME} !-d
+
+RewriteCond %{REQUESTED_FILENAME}\.html -f
+
+RewriteRule ^(.*)$ $1.html [NC, L]
